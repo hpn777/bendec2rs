@@ -1,0 +1,22 @@
+[package]
+name = "bendec2rs"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+description = "Portable Rust source generator for Bendec fixed-size message definitions"
+repository = "https://github.com/hpn777/bendec2rs"
+license = "MIT"
+readme = "README.md"
+keywords = ["codegen", "protocol", "serialization", "bendec"]
+categories = ["development-tools", "encoding"]
+include = ["/src/**", "/examples/**", "/tests/**", "/Cargo.toml", "/README.md", "/LICENSE", "/LICENSE-BENDEC"]
+
+# Independently buildable/publishable: no dependency on the host workspace.
+[workspace]
+
+[dependencies]
+serde_json = { version = "1", features = ["preserve_order"] }
+
+[[bin]]
+name = "bendec2rs"
+path = "src/main.rs"

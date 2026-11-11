@@ -1,0 +1,12 @@
+{
+  "name": "bendec2rs-development-oracle",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Development-only byte oracle; not required by the Rust library or CLI",
+  "scripts": {
+    "test": "node scripts/compatibility.cjs --synthetic-only"
+  },
+  "devDependencies": {
+    "bendec": "0.52.0"
+  }
+}
